@@ -1,0 +1,418 @@
+<main class="main-content">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page1.webp">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 m-auto">
+                    <div class="page-title-content text-center">
+                        <h2 class="title">{{product.name}}</h2>
+                        <div class="bread-crumbs"><a href="/">Home</a><span class="breadcrumb-sep"><i
+                                    class="ion-ios-arrow-forward"></i></span><span>{{product.id}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== Start Page Title Area ==-->
+
+    <!--== Start Shop Area ==-->
+    <section class="product-area shop-single-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="single-product-slider">
+                        <div class="single-product-thumb">
+                            <div class="swiper-container single-product-thumb-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide zoom zoom-hover">
+                                        <div class="thumb-item">
+                                            <a class="lightbox-image" data-fancybox="gallery" href="{{product.photo}}">
+                                                <img src="{{product.photo}}" alt="Image" width="800" height="800">
+                                            </a>
+                                            <div class="ribbons">
+                                                <span class="ribbon ribbon-new">{{product.category}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="swiper-slide zoom zoom-hover">
+                                        <div class="thumb-item">
+                                            <a class="lightbox-image" data-fancybox="gallery"
+                                                href="assets/img/shop/details/3.jpg">
+                                                <img src="assets/img/shop/details/3.jpg" alt="Image" width="800"
+                                                    height="800">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide zoom zoom-hover">
+                                        <div class="thumb-item">
+                                            <a class="lightbox-image" data-fancybox="gallery"
+                                                href="assets/img/shop/details/5.jpg">
+                                                <img src="assets/img/shop/details/5.jpg" alt="Image" width="800"
+                                                    height="800">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide zoom zoom-hover">
+                                        <div class="thumb-item">
+                                            <a class="lightbox-image" data-fancybox="gallery"
+                                                href="assets/img/shop/details/7.jpg">
+                                                <img src="assets/img/shop/details/7.jpg" alt="Image" width="800"
+                                                    height="800">
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="single-product-nav single-swiper-nav">
+                            <div class="swiper-container single-product-nav-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="nav-item">
+                                            <img src="assets/img/shop/details/2.jpg" alt="Image" width="300"
+                                                height="300">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="nav-item">
+                                            <img src="assets/img/shop/details/4.jpg" alt="Image" width="300"
+                                                height="300">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="nav-item">
+                                            <img src="assets/img/shop/details/6.jpg" alt="Image" width="300"
+                                                height="300">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="nav-item">
+                                            <img src="assets/img/shop/details/8.jpg" alt="Image" width="300"
+                                                height="300">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="single-product-info product-info-variable">
+                        <h4 class="title">{{product.name}}</h4>
+                        <div class="prices">
+                            <!-- <span class="price-old">$54.70</span> -->
+                            <span class="price" *ngFor="let price of product.prices">${{price.amount}} /
+                                {{price.unit}}</span>
+                            <!-- <span class="price-save">Save 20%</span> -->
+                        </div>
+                        <div class="product-number">Reference: {{product.id}}</div>
+                        <!-- <a class="btn-review" href="shop-single-product.html"><i class="ion-compose"></i>Write a
+                            review</a> -->
+                        <p class="product-desc">{{product.description1}}</p>
+                        <div class="product-variants">
+                            <div class="product-action-size">
+                                <span class="title">Options</span>
+                                <select class="form-control form-control-select" id="group_1" data-product-attribute="1"
+                                    name="group[1]">
+                                    <option value="{{price.amount}}" title="{{price.unit}}"
+                                        *ngFor="let price of product.prices">{{price.unit}}</option>
+                                    <!-- <option value="2" title="M" selected="selected">M</option>
+                                    <option value="3" title="L">L</option>
+                                    <option value="4" title="XL">XL</option> -->
+                                </select>
+                            </div>
+                            <!-- <div class="product-action-color">
+                                <span class="title">Color</span>
+                                <div class="form-check">
+                                    <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input input-color" type="checkbox" value=""
+                                        id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked"></label>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="quick-product-action mt-0">
+                            <span class="title">Quantity</span>
+                            <div class="action-top">
+                                <div class="pro-qty">
+                                    <input type="text" id="quantity1" title="Quantity" value="1" [(ngModel)]="quant"
+                                        (keyup)="onQuantityChange($event)" />
+                                </div>
+                                <button class="btn btn-black" (click)="addToCart()">+ Add to cart</button>
+                            </div>
+                            <a class="btn-wishlist" href="shop-wishlist.html"><i
+                                    class="ion-android-favorite-outline"></i>Add to wishlist</a>
+                        </div>
+                        <div class="widget-social-icons">
+                            <span>Share :</span>
+                            <a class="facebook" href="#/"><i class="ion-social-facebook"></i></a>
+                            <a class="twitter" href="#/"><i class="ion-social-twitter"></i></a>
+                            <a class="google-plus" href="#/"><i class="ion-social-googleplus-outline"></i></a>
+                            <a class="pinterest" href="#/"><i class="ion-social-pinterest"></i></a>
+                        </div>
+                        <div class="card-info-area">
+                            <div class="row">
+                                <div class="col-sm-4 col-6">
+                                    <div class="card-item">
+                                        <div class="icon">
+                                            <img src="assets/img/icons/d1.webp" alt="Image">
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Security policy (edit with Customer reassurance module)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-6">
+                                    <div class="card-item">
+                                        <div class="icon">
+                                            <img src="assets/img/icons/d2.webp" alt="Image">
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Delivery policy (edit with Customer reassurance module)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-6">
+                                    <div class="card-item">
+                                        <div class="icon">
+                                            <img src="assets/img/icons/d3.webp" alt="Image">
+                                        </div>
+                                        <div class="info-content">
+                                            <p>Return policy (edit with Customer reassurance module)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Shop Area ==-->
+
+    <!--== Start Shop Tab Area ==-->
+    <section class="product-area product-description-review-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product-description-review">
+                        <ul class="nav nav-tabs product-description-tab-menu" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="product-desc-tab" data-bs-toggle="tab"
+                                    data-bs-target="#productDesc" type="button" role="tab" aria-controls="productDesc"
+                                    aria-selected="true">Description</button>
+                            </li>
+                            <!-- <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="product-comment-tab" data-bs-toggle="tab"
+                                    data-bs-target="#commentProduct" type="button" role="tab"
+                                    aria-controls="commentProduct" aria-selected="false">Product Details</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="product-review-tab" data-bs-toggle="tab"
+                                    data-bs-target="#productReview" type="button" role="tab"
+                                    aria-controls="productReview" aria-selected="false">Reviews</button>
+                            </li> -->
+                        </ul>
+                        <div class="tab-content product-description-tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="productDesc" role="tabpanel"
+                                aria-labelledby="product-desc-tab">
+                                <div class="product-desc">
+                                    <p>{{product.description2}}</p>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="commentProduct" role="tabpanel"
+                                aria-labelledby="product-comment-tab">
+                                <div class="product-details">
+                                    <div class="product-manufacturer">
+                                        <a href="#/">
+                                            <img src="assets/img/photos/3.jpg" alt="Image" width="191" height="90">
+                                        </a>
+                                    </div>
+                                    <div class="product-description-info">
+                                        <ul>
+                                            <li>Reference <span>demo_1</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-description-info">
+                                        <ul>
+                                            <li>In stock <span>300 Items</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="productReview" role="tabpanel"
+                                aria-labelledby="product-review-tab">
+                                <div class="product-review">
+                                    <div class="review-header">
+                                        <h4 class="title">Customer Reviews</h4>
+                                        <div class="review-info">
+                                            <ul class="review-rating">
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star-outline"></i></li>
+                                            </ul>
+                                            <span class="review-caption">Based on 1 review</span>
+                                            <span class="review-write-btn">Write a review</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-review-form">
+                                        <h4 class="title">Write a review</h4>
+                                        <form action="#" method="post">
+                                            <div class="review-form-content">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="reviewFormName">Name</label>
+                                                            <input class="form-control" id="reviewFormName" type="text"
+                                                                placeholder="Enter your name" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="reviewFormEmail">Email</label>
+                                                            <input class="form-control" id="reviewFormEmail"
+                                                                type="email" placeholder="john.smith@example.com"
+                                                                required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="rating">
+                                                            <span class="rating-title">Rating</span>
+                                                            <span>
+                                                                <a class="ion-android-star-outline" href="#/"></a>
+                                                                <a class="ion-android-star-outline" href="#/"></a>
+                                                                <a class="ion-android-star-outline" href="#/"></a>
+                                                                <a class="ion-android-star-outline" href="#/"></a>
+                                                                <a class="ion-android-star-outline" href="#/"></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="reviewReviewTitle">Review Title</label>
+                                                            <input class="form-control" id="reviewReviewTitle"
+                                                                type="text" placeholder="Give your review a title"
+                                                                required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="reviewFormTextarea">Body of Review
+                                                                <span>(1500)</span></label>
+                                                            <textarea class="form-control textarea"
+                                                                id="reviewFormTextarea" name="comment" rows="7"
+                                                                placeholder="Write your comments here"
+                                                                required=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group pull-right">
+                                                            <button class="btn btn-theme" type="submit">Submit
+                                                                Review</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="review-content">
+                                        <div class="review-item">
+                                            <ul class="review-rating">
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star"></i></li>
+                                                <li><i class="ion-android-star-outline"></i></li>
+                                            </ul>
+                                            <h4 class="title">Cobus Bester</h4>
+                                            <h5 class="review-date"><span>Cobus Bester</span> on <span>Mar 03,
+                                                    2022</span></h5>
+                                            <p>Can’t wait to start mixin’ with this one! Irba-irr-Up-up-up-up-date your
+                                                theme!</p>
+                                            <a class="review-report" href="#/">Report as Inappropriate</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Shop Tab Area ==-->
+
+    <!--== Start Shop Tab Area ==-->
+    <section class="product-area latest-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 m-auto">
+                    <div class="section-title text-center">
+                        <div class="subtitle">Awesome Shop</div>
+                        <h2 class="title">Related products in the same category:</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container-wrap swiper-nav-style product-slider-nav">
+                        <div class="swiper-container product-slider-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" *ngFor="let product of relatedProducts">
+                                    <!-- Start Product Item -->
+                                    <div class="product-item">
+                                        <div class="product-thumb">
+                                            <a href="/shop/product/{{product.category}}/{{product.id}}">
+                                                <img src="{{product.photo}}" alt="Image" width="300" height="300">
+                                                <!-- <span class="bg-thumb" data-bg-img="assets/img/shop/2.webp"></span> -->
+                                            </a>
+                                            <div class="ribbons">
+                                                <span class="ribbon ribbon-discount">{{product.category}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <h4 class="title"><a
+                                                    href="/shop/product/{{product.category}}/{{product.id}}">{{product.name}}</a>
+                                            </h4>
+                                            <div class="prices">
+                                                <span class="price">${{product.prices[0].amount}}</span>
+                                            </div>
+                                            <div class="content-inner">
+                                                <button class="btn-link" type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#action-CartAddModal"><i class="icon-bag icons"></i>
+                                                    Add to cart </button>
+                                                <div class="product-info-action">
+                                                    <button class="action-quick-view" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
+                                                        <i class="icon-eye icons"></i></button>
+                                                    <button class="action-wishlist" type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#action-WishlistModal"><i
+                                                            class="icon-heart icons"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Shop Tab Area ==-->
+</main>

@@ -1,0 +1,333 @@
+<!--== Start Header Wrapper ==-->
+<header class="header-wrapper">
+    <div class="header-top d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-top-inner">
+                        <div class="header-top-action-area">
+                            <div class="header-lang-dropdown">
+                                <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><img src="assets/img/photos/1.webp"
+                                        alt="Image" width="16" height="11"> <span>English</span></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                                    <li class="dropdown-item active"><img src="assets/img/photos/1.webp" alt="Image"
+                                            width="16" height="11"> <span>English</span></li>
+                                    <li class="dropdown-item"><img src="assets/img/photos/2.webp" alt="Image" width="16"
+                                            height="11"> <span>Français</span></li>
+                                    <li class="dropdown-item"><img src="assets/img/photos/2.webp" alt="Image" width="16"
+                                            height="11"> <span>German</span></li>
+                                </ul>
+                            </div>
+                            <!-- <div class="header-currency-dropdown">
+                                <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span>USD $</span></button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                                    <li class="dropdown-item active"><span>USD $</span></li>
+                                    <li class="dropdown-item"><span>EUR €</span></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                        <div class="header-top-info">
+                            <div class="info-mail">
+                                <a href="mailto://Support@posthemes.com"> Support@posthemes.com </a>
+                            </div>
+                            <div class="info-map">
+                                <a href="contact"> Store Locator </a>
+                            </div>
+                            <!-- <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                                <span class="current-item">My Account</span>
+                                <ul class="info-dropdown info-dropdown-toggle">
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="shop-checkout.html">Checkout</a></li>
+                                    <li><a href="#">Sign Out</a></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle d-lg-none">
+        <div class="header-resmobile d-block d-lg-none">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 col-sm-4 col-3">
+                        <div class="header-action-area btn-action-menu">
+                            <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                                <i class="ion-navicon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="header-logo-area">
+                            <a href="index.html">
+                                <img class="logo-main" src="assets/img/logo4.webp" alt="Logo" width="168" height="57" />
+                                <img class="logo-light" src="assets/img/logo4.webp" alt="Logo" width="168"
+                                    height="57" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-3">
+                        <div class="header-middle-action-area">
+                            <!-- <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                                <span class="current-item"><i class="icon-user"></i></span>
+                                <ul class="info-dropdown info-dropdown-toggle">
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="shop-checkout.html">Checkout</a></li>
+                                    <li><a href="#">Sign Out</a></li>
+                                </ul>
+                            </div> -->
+                            <div class="header-action-cart header-minicart">
+                                <a class="btn-cart cart-icon" href="shop-cart.html">
+                                    <span class="cart-count">{{cartNumber}}</span>
+                                    <i class="icon-bag"></i>
+                                </a>
+                                <div class="header-minicart-content">
+                                    <div class="minicart-inner">
+                                        <div class="minicart-list">
+                                            <div class="minicart-item" *ngFor="let item of cartItems">
+                                                <a class="thumb"
+                                                    href="/shop/product/{{item.product.category}}/{{item.product.id}}">
+                                                    <img src="{{item.product.photo}}" alt="Image-HasTech" width="125"
+                                                        height="125">
+                                                    <span>{{item.product.name}}</span>
+                                                    <!-- <span class="quantity-number">1x</span> -->
+                                                </a>
+                                                <p class="quantity-price">${{itemTotal(item)}}</p>
+                                                <!-- <p class="quantity-dimension">Dimension: 40x60cm</p> -->
+                                                <button class="minicart-remove" type="button">×</button>
+                                            </div>
+                                        </div>
+                                        <div class="minicart-total">
+                                            <!-- <div class="minicart-price">
+                                                <span>Subtotal</span>
+                                                <span class="total">$85.00</span>
+                                            </div>
+                                            <div class="minicart-price">
+                                                <span>Shipping</span>
+                                                <span class="total">$7.00</span>
+                                            </div>
+                                            <div class="minicart-price">
+                                                <span>Taxes</span>
+                                                <span class="total">$85.00</span>
+                                            </div> -->
+                                            <div class="minicart-price minicart-subtotal">
+                                                <span>Total</span>
+                                                <span class="total">${{total}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="minicart-buttons">
+                                            <a class="cart-button" href="checkout">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="header-search-box">
+                            <form action="#" method="post">
+                                <div class="form-input-group">
+                                    <input type="text" id="search2" placeholder="Search our catalog">
+                                    <button type="submit" class="btn-src">
+                                        <i class="icon-magnifier"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-area header-default header-transparent sticky-header d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-3 col-lg-2 col-xl-3">
+                    <div class="header-logo-area">
+                        <a href="/">
+                            <img class="logo-main" src="assets/img/logo4.webp" alt="Logo" width="167" height="55">
+                            <img class="logo-light" src="assets/img/logo-light.webp" alt="Logo" width="167" height="55">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-9 col-lg-10 col-xl-9">
+                    <div class="header-align">
+                        <div class="header-navigation-area d-none d-lg-block">
+                            <ul class="main-menu nav position-relative">
+                                <li class=" active"><a href="/">Home</a>
+                                </li>
+                                <li class=" position-static"><a href="/shop/products"><span>Shop</span></a>
+                                </li>
+                                <li class="has-submenu"><a href="#/">Categories</a>
+                                    <ul class="submenu-nav">
+                                        <li *ngFor="let category of categories"><a
+                                                href="/shop/category/{{category}}">{{category}}</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-action-area">
+                            <button class="btn-search btn-search-menu">
+                                <i class="icon-magnifier"></i>
+                            </button>
+                            <div class="header-action-wishlist">
+                                <a class="btn-wishlist" href="wishlist">
+                                    <span class="cart-count">0</span>
+                                    <i class="icon-heart"></i>
+                                </a>
+                            </div>
+                            <div class="header-action-cart header-minicart">
+                                <a class="btn-cart cart-icon" href="cart">
+                                    <span class="cart-count">{{cartNumber}}</span>
+                                    <i class="icon-bag"></i>
+                                </a>
+                                <span class="cart-amount">${{total}}</span>
+                                <div class="header-minicart-content">
+                                    <div class="minicart-inner">
+                                        <div class="minicart-list">
+                                            <div class="minicart-item" *ngFor="let item of cartItems">
+                                                <a class="thumb"
+                                                    href="/shop/product/{{item.product.category}}/{{item.product.id}}">
+                                                    <img src="{{item.product.photo}}" alt="Image-HasTech" width="125"
+                                                        height="125">
+                                                    <span>{{item.product.name}}</span>
+                                                    <!-- <span class="quantity-number">1x</span> -->
+                                                </a>
+                                                <p class="quantity-price">${{itemTotal(item)}}</p>
+                                                <!-- <p class="quantity-dimension">Dimension: 40x60cm</p> -->
+                                                <button class="minicart-remove" type="button">×</button>
+                                            </div>
+                                        </div>
+                                        <div class="minicart-total">
+                                            <!-- <div class="minicart-price">
+                                                <span>Subtotal</span>
+                                                <span class="total">$85.00</span>
+                                            </div>
+                                            <div class="minicart-price">
+                                                <span>Shipping</span>
+                                                <span class="total">$7.00</span>
+                                            </div>
+                                            <div class="minicart-price">
+                                                <span>Taxes</span>
+                                                <span class="total">$85.00</span>
+                                            </div> -->
+                                            <div class="minicart-price minicart-subtotal">
+                                                <span>Total</span>
+                                                <span class="total">${{total}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="minicart-buttons">
+                                            <a class="cart-button" href="checkout">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                                <i class="icon-menu"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--== End Header Wrapper ==-->
+
+<!--== Start Side Menu ==-->
+<aside class="off-canvas-area offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithSideMenu">
+    <div class="offcanvas-top">
+        <div class="header-top-info">
+            <div class="info-mail">
+                <a href="mailto://Support@posthemes.com"> Support@posthemes.com </a>
+            </div>
+            <div class="info-map">
+                <a href="contact"> Store Locator </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidemenu-top-inner">
+        <div class="header-top-action-area">
+            <div class="header-lang-dropdown">
+                <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang2" data-bs-toggle="dropdown"
+                    aria-expanded="false"><img src="assets/img/photos/1.webp" alt="Image" width="16" height="11">
+                    <span>English</span></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownLang2">
+                    <li class="dropdown-item active"><img src="assets/img/photos/1.webp" alt="Image" width="16"
+                            height="11"> <span>English</span></li>
+                    <li class="dropdown-item"><img src="assets/img/photos/2.webp" alt="Image" width="16" height="11">
+                        <span>Français</span>
+                    </li>
+                    <li class="dropdown-item"><img src="assets/img/photos/2.webp" alt="Image" width="16" height="11">
+                        <span>German</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="header-currency-dropdown">
+                <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency2"
+                    data-bs-toggle="dropdown" aria-expanded="false"><span>USD $</span></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownCurrency2">
+                    <li class="dropdown-item active"><span>USD $</span></li>
+                    <li class="dropdown-item"><span>EUR €</span></li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">Menu <i
+                class="ion-android-arrow-back"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Start Mobile Menu Wrapper -->
+        <div class="res-mobile-menu">
+            <nav id="offcanvasNav" class="offcanvas-menu">
+                <ul>
+                    <li><a href="javascript:void(0)">Home</a>
+                    </li>
+                    <li class="offcanvas-nav-parent">
+                        <a class="offcanvas-nav-item" href="/shop/products">Shop</a>
+                    </li>
+                    <li><a href="javascript:void(0)">Categories</a>
+                        <ul>
+                            <li *ngFor="let category of categories"><a
+                                    href="/shop/category/{{category}}">{{category}}</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about">About Us</a></li>
+
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- End Mobile Menu Wrapper -->
+    </div>
+</aside>
+<!--== End Side Menu ==-->
+
+<!--== Start Aside Search Menu ==-->
+<div class="search-box-wrapper">
+    <div class="search-box-content-inner">
+        <div class="search-box-form-wrap">
+            <div class="search-note">
+                <p>Start typing and press Enter to search</p>
+            </div>
+            <form action="#" method="post">
+                <div class="search-form position-relative">
+                    <input type="search" class="form-control" placeholder="Search" id="search-input">
+                    <button class="search-button"><i class="ion-ios-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--== End Aside Search Menu ==-->
+    <a href="javascript:;" class="search-close"><i class="ion-close-round"></i></a>
+</div>
+<!--== End Aside Search Menu ==-->
